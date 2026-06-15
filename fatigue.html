@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fatigue and Rutting Calculator</title>
+<style>
+
+        body{
+            font-family: Arial, sans-serif;
+            text-align:flex-start ;
+            margin-top:80px;
+            background:#a7dcdf;
+        }
+
+        .home-btn{
+            display:block;
+            width:300px;
+            margin:25px auto;
+            padding:18px;
+            text-decoration:none;
+            background:#5590b9;
+            border-style: groove;
+            color:white;
+            border-radius:12px;
+            font-size:20px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>Fatigue and Rutting Life Calculator</h2>
+
+    <label>Tensile Strain εt</label>
+    <input
+        type="number"
+        id="et"
+        step="0.000001"
+        value="0.00025">
+
+    <br><br>
+
+    <label>Compressive Strain εv</label>
+    <input
+        type="number"
+        id="ev"
+        step="0.000001"
+        value="0.00030">
+
+    <br><br>
+
+    <label>Bituminous Modulus Ebit (MPa)</label>
+    <input
+        type="number"
+        id="ebit"
+        value="3000">
+
+    <br><br>
+
+    <label>Design Traffic (msa)</label>
+    <input
+        type="number"
+        id="traffic"
+        value="50">
+
+    <br><br>
+
+    <button type="button" onclick="calculate()">
+        Calculate Fatigue & Rutting Life
+    </button>
+
+    <div id="result">
+        Results will appear here...
+    </div>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>

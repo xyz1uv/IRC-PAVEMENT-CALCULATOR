@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pavement Life Calculator</title>
+<style>
+
+        body{
+            font-family: Arial, sans-serif;
+            text-align:flex-start ;
+            margin-top:80px;
+            background:#a7dcdf;
+        }
+
+        .home-btn{
+            display:block;
+            width:300px;
+            margin:25px auto;
+            padding:18px;
+            text-decoration:none;
+            background:#5590b9;
+            border-style: groove;
+            color:white;
+            border-radius:12px;
+            font-size:20px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>Life Calculator</h2>
+
+    <label>Wheel Load P (N)</label>
+    <input type="number" id="load" value="40000">
+
+    <br><br>
+
+    <label>Tire Pressure p (MPa)</label>
+    <input type="number" id="pressure" step="0.01" value="0.56">
+
+    <br><br>
+
+    <label>Surface Thickness h (mm)</label>
+    <input type="number" id="thickness" value="200">
+
+    <br><br>
+
+    <label>Surface Layer Modulus E1 (MPa)</label>
+    <input type="number" id="E1" value="3000">
+
+    <br><br>
+
+    <label>Subgrade Modulus E2 (MPa)</label>
+    <input type="number" id="E2" value="100">
+
+    <br><br>
+
+    <label>Surface Poisson Ratio ν1</label>
+    <input type="number"
+           id="nu1"
+           step="0.01"
+           value="0.35">
+
+    <br><br>
+
+    <label>Subgrade Poisson Ratio ν2</label>
+    <input type="number"
+           id="nu2"
+           step="0.01"
+           value="0.45">
+
+    <br><br>
+
+    <label>Bituminous Modulus Ebit (MPa)</label>
+    <input type="number"
+           id="ebit"
+           value="3000">
+
+    <br><br>
+
+    <label>Design Traffic (msa)</label>
+    <input type="number"
+           id="traffic"
+           value="50">
+
+    <br><br>
+
+    <button type="button" onclick="calculateLife()">
+        Calculate Pavement Life
+    </button>
+
+    <div id="result">
+        Results will appear here...
+    </div>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
